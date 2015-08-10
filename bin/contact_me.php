@@ -19,7 +19,7 @@ $message = $_POST['message'];
 $to = 'info@wimpijpops.be'; // PUT YOUR EMAIL ADDRESS HERE
 $email_subject = "wimpijpops.be contactformulier:  $name"; // EDIT THE EMAIL SUBJECT LINE HERE
 $email_body = "Nieuw bericht ontvangen van de website.\n\n"."Hier zijn de details:\n\nNaam: $name\n\nTelefoon: $phone\n\nE-mail: $email_address\n\nBericht:\n$message";
-$headers = "Van: noreply@wimpijpops.be\n";
+$headers = "From: noreply@wimpijpops.be\n";
 $headers .= "Reply-To: $email_address";
 mail($to,$email_subject,$email_body,$headers);
 return true;
